@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PetroByte Customer Reviews — 5000+ petrol pump dealers trust PetroByte across India. Read and watch real customer testimonials." />
+  <title>Customer Reviews — PetroByte Petrol Pump Software</title>
+  <link rel="stylesheet" href="../assets/css/root.css" />
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/sections.css" />
+  <style>
+    .customers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+    }
+    .customer-card-full {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--trans);
+    }
+    .customer-card-full:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); border-color: var(--blue-light); }
+    .ccf-header {
+      padding: var(--sp-6);
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      display: flex; align-items: center; gap: var(--sp-4);
+    }
+    .ccf-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: var(--text-xl); color: var(--white);
+      flex-shrink: 0;
+    }
+    .ccf-info h5 { color: var(--white); font-size: var(--text-base); font-weight: 700; }
+    .ccf-info p  { color: rgba(255,255,255,0.6); font-size: var(--text-xs); margin-top: 3px; }
+    .ccf-body { padding: var(--sp-6); }
+    .ccf-stars { color: #F59E0B; font-size: var(--text-lg); margin-bottom: var(--sp-3); }
+    .ccf-quote { font-size: var(--text-sm); color: var(--gray-600); line-height: 1.8; font-style: italic; margin-bottom: var(--sp-4); }
+    .ccf-tags { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-4); }
+    .ccf-tag { background: var(--blue-xlight); color: var(--blue); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-pill); }
+    .ccf-video { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--text-sm); font-weight: 600; color: var(--blue); text-decoration: none; transition: var(--trans-fast); }
+    .ccf-video:hover { color: var(--orange); }
+    .ccf-video svg { width: 16px; height: 16px; }
+    .states-strip {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: var(--sp-3); margin-top: var(--sp-8);
+    }
+    .state-pill {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-pill); padding: var(--sp-2) var(--sp-4);
+      font-size: var(--text-sm); font-weight: 600; color: var(--gray-700);
+      box-shadow: var(--shadow-sm); transition: var(--trans-fast);
+    }
+    .state-pill:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-xlight); }
+    .map-section {
+      background: linear-gradient(135deg, var(--navy), var(--blue-dark));
+      border-radius: var(--radius-xl);
+      padding: var(--sp-10);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .map-section::before { content:''; position:absolute; inset:0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); }
+    @media(max-width: 1024px) { .customers-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width: 600px)  { .customers-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!--
+<div class="announcement-bar">
+  🌟 <strong>5000+ Dealers Trust PetroByte</strong> — Join them with a free 15-day trial &nbsp;|&nbsp;
+  <a href="https://petrobyte.app/reg/welcome" target="_blank">Start Now →</a>
+  <span class="announcement-close">✕</span>
+</div>
+-->
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M3 14h7v7H3z"/><path d="M17.5 14a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg></div>
+      <span class="logo-text">Petro<span>Byte</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a><a href="../features.html">Features</a>
+      <a href="../pricing.html">Pricing</a><a href="../about.html">About</a><a href="../contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary btn-sm" target="_blank">Start Free Trial</a>
+      <div class="nav-hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="../index.html">Home</a><a href="../features.html">Features</a>
+  <a href="../pricing.html">Pricing</a><a href="../about.html">About</a><a href="../contact.html">Contact</a>
+  <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary" style="margin-top:1rem" target="_blank">Start Free Trial</a>
+</div>
+
+<!-- Hero -->
+<section style="background:linear-gradient(135deg,var(--navy),var(--navy-light));padding:var(--sp-20) 0 var(--sp-16);text-align:center;overflow:hidden;position:relative">
+  <div class="container" style="position:relative">
+    <span class="badge badge-orange" style="margin-bottom:var(--sp-4);display:inline-block">#PetroByte_Is_The_Best</span>
+    <h1 style="font-family:var(--font-display);font-size:var(--text-5xl);color:var(--white);margin-bottom:var(--sp-4)">Our <span style="color:var(--orange)">Customers</span></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:var(--text-lg);max-width:560px;margin:0 auto var(--sp-8)">5000+ petrol pump dealers across 15+ states trust PetroByte to manage their business every single day.</p>
+    <div style="display:flex;justify-content:center;gap:var(--sp-8);flex-wrap:wrap">
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">5000+</div>
+        <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6)">Happy Customers</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">15+</div>
+        <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6)">States Covered</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">99%</div>
+        <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6)">Satisfaction Rate</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">4</div>
+        <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6)">Oil Companies</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="wave-divider" style="background:var(--navy)"><svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0 C480,50 960,0 1440,50 L1440,50 L0,50 Z" fill="#F8FAFC"/></svg></div>
+
+<!-- Customer Cards -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Video Reviews</span>
+      <h2>What Our Customers <span>Say</span></h2>
+      <p>Real petrol pump dealers. Real feedback. Watch their review videos.</p>
+    </div>
+    <div class="customers-grid">
+
+      <!-- Card 1 -->
+      <div class="customer-card-full reveal">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:var(--blue)">AK</div>
+          <div class="ccf-info">
+            <h5>Ashok Kumar</h5>
+            <p>Ashoka Filling Station (2 RO) — Himachal Pradesh</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"PetroByte ne hamare pump ka poora kaam aasaan kar diya. Ab koi tension nahi — shift close hoti hai, report ready hoti hai. Bilkul best software hai."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Indian Oil</span>
+            <span class="ccf-tag">📍 Himachal Pradesh</span>
+            <span class="ccf-tag">2 Retail Outlets</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="customer-card-full reveal reveal-delay-1">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:var(--orange)">MA</div>
+          <div class="ccf-info">
+            <h5>Mr. Mahindra Aithani</h5>
+            <p>Jai Maa Bhagwati Oils — Uttarakhand</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Tally integration feature bahut kaam aata hai. Ek click mein sara data Tally mein chala jaata hai. Time ki bahut bachat hoti hai aur accuracy bhi 100% hai."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Nayara Energy</span>
+            <span class="ccf-tag">📍 Uttarakhand</span>
+            <span class="ccf-tag">Tally Integration</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="customer-card-full reveal reveal-delay-2">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:#7C3AED">SS</div>
+          <div class="ccf-info">
+            <h5>Mr. Sandeep Singh</h5>
+            <p>M/s Sewad Transport — Rajasthan</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Credit customer billing ab fully automatic hai. Customer ko bill ka SMS automatically jaata hai. Bahut professional feel aata hai aur collection bhi improve hui hai."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ BPCL</span>
+            <span class="ccf-tag">📍 Rajasthan</span>
+            <span class="ccf-tag">Credit Billing</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="customer-card-full reveal">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:var(--success)">AG</div>
+          <div class="ccf-info">
+            <h5>Mr. Anand Gulia</h5>
+            <p>Shri Ram Filling Station (2 RO) — Haryana</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Mobile app se kahin se bhi apna business dekh sakte hain. Raat ko ghar pe baith ke bhi puri report dekhta hoon. PetroByte really changed how I manage my pumps."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Indian Oil</span>
+            <span class="ccf-tag">📍 Haryana</span>
+            <span class="ccf-tag">2 Retail Outlets</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="customer-card-full reveal reveal-delay-1">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:#DC2626">AC</div>
+          <div class="ccf-info">
+            <h5>Mr. Ankit Chelekar</h5>
+            <p>Dakshayani Servo Services — Maharashtra</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"GST return reports bahut accurate aate hain. CA ko data dena ab 10 minute ka kaam hai jo pehle 2-3 din lagte the. PetroByte ne accounting ka sara stress khatam kar diya."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Indian Oil</span>
+            <span class="ccf-tag">📍 Maharashtra</span>
+            <span class="ccf-tag">GST Reports</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="customer-card-full reveal reveal-delay-2">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:#0284C7">RK</div>
+          <div class="ccf-info">
+            <h5>Mr. Ramalinga Raju Kanu</h5>
+            <p>Sri Surya Fuelling Station — Andhra Pradesh</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Support team is very helpful and always available. Software is very easy to understand. Within 2 days we were fully running. Best investment for our petrol pump."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Indian Oil</span>
+            <span class="ccf-tag">📍 Andhra Pradesh</span>
+            <span class="ccf-tag">Quick Setup</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="customer-card-full reveal">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:#B45309">ND</div>
+          <div class="ccf-info">
+            <h5>Dr. Nitish Dev Singh</h5>
+            <p>Sri Doodha Mata Fuels (2 RO) — Uttar Pradesh</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"As a doctor managing 2 petrol pumps, I needed something I could check remotely anytime. PetroByte's mobile app and dashboards are exactly what I needed. Highly recommended."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Nayara Energy</span>
+            <span class="ccf-tag">📍 Uttar Pradesh</span>
+            <span class="ccf-tag">2 Retail Outlets</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="customer-card-full reveal reveal-delay-1">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:var(--blue-dark)">PC</div>
+          <div class="ccf-info">
+            <h5>Mr. Prem Chand</h5>
+            <p>Suraj Petroleum — Rajasthan</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Pehle Excel mein sab kuch karte the, bahut time laagta tha aur galtiyan bhi hoti thi. Ab PetroByte mein sab automatic hai. Shift band karo, report ready. Zabardast software hai."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ Indian Oil</span>
+            <span class="ccf-tag">📍 Rajasthan</span>
+            <span class="ccf-tag">Excel to PetroByte</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 9 — Bonus -->
+      <div class="customer-card-full reveal reveal-delay-2">
+        <div class="ccf-header">
+          <div class="ccf-avatar" style="background:var(--orange)">VK</div>
+          <div class="ccf-info">
+            <h5>Mr. Vijay Kumar</h5>
+            <p>Shree Balaji Petroleum — Gujarat</p>
+          </div>
+        </div>
+        <div class="ccf-body">
+          <div class="ccf-stars">★★★★★</div>
+          <p class="ccf-quote">"Payroll management bahut easy hai. Employee ki salary automatically calculate hoti hai. Aur WhatsApp pe notification bhi aata hai. Worth every rupee."</p>
+          <div class="ccf-tags">
+            <span class="ccf-tag">🛢️ HPCL</span>
+            <span class="ccf-tag">📍 Gujarat</span>
+            <span class="ccf-tag">Payroll Feature</span>
+          </div>
+          <a href="https://youtube.com/@petrobyte" class="ccf-video" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Review Video
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- States Coverage Map (Your Addition) -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Pan India Presence</span>
+      <h2>States Where PetroByte <span>is Active</span></h2>
+      <p>From Himachal Pradesh to Andhra Pradesh — petrol pump dealers across India trust PetroByte.</p>
+    </div>
+    <div class="reveal">
+      <div class="map-section">
+        <h3 style="color:white;margin-bottom:var(--sp-3);position:relative">🗺️ India Coverage</h3>
+        <p style="color:rgba(255,255,255,0.6);max-width:500px;margin:0 auto var(--sp-8);position:relative;font-size:var(--text-sm)">PetroByte is actively used by petrol pump dealers across these states</p>
+        <div class="states-strip" style="position:relative">
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Rajasthan</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Haryana</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Himachal Pradesh</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Uttarakhand</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Uttar Pradesh</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Maharashtra</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Andhra Pradesh</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Gujarat</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Madhya Pradesh</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Punjab</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Bihar</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Karnataka</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Telangana</span>
+          <span class="state-pill" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.15)">📍 Delhi NCR</span>
+          <span class="state-pill" style="background:rgba(232,120,32,0.3);color:var(--orange);border-color:var(--orange)">+ More Growing...</span>
+        </div>
+        <p style="margin-top:var(--sp-6);font-size:var(--text-sm);color:rgba(255,255,255,0.4);position:relative">Mission: 50,000+ Petrol Pumps across all 28 states of India by 2030</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Oil Company Stats -->
+<section class="section-sm section-gray">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:var(--sp-8)">
+      <span class="eyebrow">By Oil Company</span>
+      <h2>Our Customer <span>Distribution</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-5)">
+      <div class="card reveal" style="text-align:center;border-top:4px solid #003087">
+        <div style="width:52px;height:52px;background:#003087;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-3);font-weight:800;font-size:var(--text-lg);color:white">IO</div>
+        <h5>Indian Oil</h5>
+        <p style="font-size:var(--text-sm);color:var(--gray-500)">IOCL Dealers — Largest Share</p>
+        <div style="margin-top:var(--sp-3);height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden"><div style="height:100%;width:68%;background:#003087;border-radius:3px"></div></div>
+        <span style="font-size:var(--text-xs);color:var(--gray-400);margin-top:var(--sp-1);display:block">~68% of customers</span>
+      </div>
+      <div class="card reveal reveal-delay-1" style="text-align:center;border-top:4px solid #E8232A">
+        <div style="width:52px;height:52px;background:#E8232A;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-3);font-weight:800;font-size:var(--text-lg);color:white">BP</div>
+        <h5>BPCL</h5>
+        <p style="font-size:var(--text-sm);color:var(--gray-500)">Bharat Petroleum Dealers</p>
+        <div style="margin-top:var(--sp-3);height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden"><div style="height:100%;width:16%;background:#E8232A;border-radius:3px"></div></div>
+        <span style="font-size:var(--text-xs);color:var(--gray-400);margin-top:var(--sp-1);display:block">~16% of customers</span>
+      </div>
+      <div class="card reveal reveal-delay-2" style="text-align:center;border-top:4px solid #006B3F">
+        <div style="width:52px;height:52px;background:#006B3F;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-3);font-weight:800;font-size:var(--text-lg);color:white">HP</div>
+        <h5>HPCL</h5>
+        <p style="font-size:var(--text-sm);color:var(--gray-500)">Hindustan Petroleum Dealers</p>
+        <div style="margin-top:var(--sp-3);height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden"><div style="height:100%;width:11%;background:#006B3F;border-radius:3px"></div></div>
+        <span style="font-size:var(--text-xs);color:var(--gray-400);margin-top:var(--sp-1);display:block">~11% of customers</span>
+      </div>
+      <div class="card reveal reveal-delay-3" style="text-align:center;border-top:4px solid var(--orange)">
+        <div style="width:52px;height:52px;background:var(--orange);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-3);font-weight:800;font-size:var(--text-lg);color:white">NE</div>
+        <h5>Nayara Energy</h5>
+        <p style="font-size:var(--text-sm);color:var(--gray-500)">Nayara Energy Dealers</p>
+        <div style="margin-top:var(--sp-3);height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden"><div style="height:100%;width:5%;background:var(--orange);border-radius:3px"></div></div>
+        <span style="font-size:var(--text-xs);color:var(--gray-400);margin-top:var(--sp-1);display:block">~5% of customers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container"><div class="reveal">
+    <h2 style="color:white">Join 5000+ Happy Dealers</h2>
+    <p>Start your free 15-day trial and experience why petrol pump dealers across India choose PetroByte.</p>
+    <div class="cta-btns">
+      <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary btn-lg" target="_blank">Start Free Trial</a>
+      <a href="../contact.html" class="btn btn-outline btn-lg">Talk to Our Team</a>
+    </div>
+  </div></div>
+</section>
+
+<footer style="background:var(--navy);padding:var(--sp-8) 0;text-align:center;color:rgba(255,255,255,0.4);font-size:var(--text-sm);border-top:1px solid rgba(255,255,255,0.08)">
+  <div class="container">
+    <p>PetroByte® is a registered trademark of BeanByte Softwares Private Limited. Copyright © 2022–2026 All Rights Reserved.</p>
+    <div style="display:flex;justify-content:center;gap:var(--sp-5);margin-top:var(--sp-3);flex-wrap:wrap">
+      <a href="../index.html" style="color:rgba(255,255,255,0.5)">Home</a>
+      <a href="../features.html" style="color:rgba(255,255,255,0.5)">Features</a>
+      <a href="../pricing.html" style="color:rgba(255,255,255,0.5)">Pricing</a>
+      <a href="../about.html" style="color:rgba(255,255,255,0.5)">About</a>
+      <a href="../contact.html" style="color:rgba(255,255,255,0.5)">Contact</a>
+      <a href="terms.html" style="color:rgba(255,255,255,0.5)">Terms</a>
+      <a href="policy.html" style="color:rgba(255,255,255,0.5)">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<div class="scroll-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></div>
+<div class="toast"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
