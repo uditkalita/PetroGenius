@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About PetroByte — Built by BeanByte Softwares Pvt. Ltd., Jaipur. Our story, mission, and the team behind India's best petrol pump software." />
+  <title>About PetroByte — India's Best Petrol Pump Software</title>
+  <link rel="stylesheet" href="assets/css/root.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <style>
+    .timeline { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 0 auto; }
+    .timeline-item { display: flex; gap: var(--sp-6); }
+    .timeline-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .timeline-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 3px solid var(--white); box-shadow: 0 0 0 3px var(--blue-light); flex-shrink: 0; }
+    .timeline-line { flex: 1; width: 2px; background: var(--blue-light); margin: 4px 0; min-height: 40px; }
+    .timeline-content { padding-bottom: var(--sp-8); }
+    .timeline-year { font-size: var(--text-xs); font-weight: 700; color: var(--orange); letter-spacing: 0.1em; margin-bottom: var(--sp-1); }
+    .timeline-content h5 { font-size: var(--text-lg); color: var(--gray-900); margin-bottom: var(--sp-2); }
+    .timeline-content p  { font-size: var(--text-sm); color: var(--gray-500); line-height: 1.7; }
+    .value-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--sp-5); }
+    .value-card { background: var(--white); border-radius: var(--radius-lg); padding: var(--sp-6); border: 1px solid var(--gray-100); text-align: center; box-shadow: var(--shadow-sm); transition: var(--trans); }
+    .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
+    .value-icon { width: 56px; height: 56px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--sp-4); }
+    .value-icon svg { width: 28px; height: 28px; }
+    .value-card h5 { font-size: var(--text-lg); color: var(--gray-900); margin-bottom: var(--sp-2); }
+    .value-card p  { font-size: var(--text-sm); color: var(--gray-500); line-height: 1.7; }
+    @media(max-width:768px) { .value-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!--
+<div class="announcement-bar">
+  🎉 <strong>15-Day Free Trial</strong> — No Credit Card Required &nbsp;|&nbsp;
+  <a href="https://petrobyte.app/reg/welcome" target="_blank">Start Now →</a>
+  <span class="announcement-close">✕</span>
+</div>
+-->
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M3 14h7v7H3z"/><path d="M17.5 14a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg></div>
+      <span class="logo-text">Petro<span>Byte</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a><a href="about.html" class="active">About</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary btn-sm" target="_blank">Get Demo Now</a>
+      <div class="nav-hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a><a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary" style="margin-top:1rem" target="_blank">Get Demo Now</a>
+</div>
+
+<!-- Hero -->
+<section style="background:linear-gradient(135deg,var(--navy),var(--navy-light));padding:var(--sp-20) 0 var(--sp-16);text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E\");"></div>
+  <div class="container" style="position:relative">
+    <span class="badge badge-orange" style="margin-bottom:var(--sp-4);display:inline-block">Made in India 🇮🇳</span>
+    <h1 style="font-family:var(--font-display);font-size:var(--text-5xl);color:var(--white);margin-bottom:var(--sp-4)">About <span style="color:var(--orange)">PetroByte</span></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:var(--text-lg);max-width:580px;margin:0 auto">Our story — how a small team from Jaipur built India's most trusted petrol pump management software.</p>
+  </div>
+</section>
+<div class="wave-divider" style="background:var(--navy)"><svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0 C480,50 960,0 1440,50 L1440,50 L0,50 Z" fill="#F8FAFC"/></svg></div>
+
+<!-- Mission -->
+<section class="section section-gray">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
+      <div class="reveal">
+        <span class="eyebrow" style="display:inline-block;margin-bottom:var(--sp-4)">Our Story</span>
+        <h2>Built by Developers Who <span style="color:var(--blue)">Talked to Dealers</span></h2>
+        <p style="color:var(--gray-500);margin-bottom:var(--sp-5);line-height:1.8">PetroByte was born out of a simple observation — petrol pump owners across India were managing crores of rupees worth of business using pen and paper or basic Excel sheets. There was no software built specifically for them.</p>
+        <p style="color:var(--gray-500);margin-bottom:var(--sp-5);line-height:1.8">The team at BeanByte Softwares spent months visiting petrol pumps across Rajasthan, talking to dealers, understanding their daily workflow, their pain points, and what they truly needed from a software.</p>
+        <p style="color:var(--gray-500);line-height:1.8">The result was PetroByte — a cloud software built from the ground up, specifically for Indian petrol pump dealers, in a language and format they understand.</p>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div style="background:linear-gradient(135deg,var(--navy),var(--blue-dark));border-radius:var(--radius-xl);padding:var(--sp-10);color:white">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5)">
+            <div style="text-align:center;padding:var(--sp-5);background:rgba(255,255,255,0.06);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">5000+</div>
+              <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6);margin-top:var(--sp-1)">Happy Customers</div>
+            </div>
+            <div style="text-align:center;padding:var(--sp-5);background:rgba(255,255,255,0.06);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">15+</div>
+              <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6);margin-top:var(--sp-1)">States Covered</div>
+            </div>
+            <div style="text-align:center;padding:var(--sp-5);background:rgba(255,255,255,0.06);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">4</div>
+              <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6);margin-top:var(--sp-1)">Oil Companies Supported</div>
+            </div>
+            <div style="text-align:center;padding:var(--sp-5);background:rgba(255,255,255,0.06);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--orange)">99%</div>
+              <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.6);margin-top:var(--sp-1)">Customer Satisfaction</div>
+            </div>
+          </div>
+          <p style="text-align:center;margin-top:var(--sp-5);font-size:var(--text-sm);color:rgba(255,255,255,0.5)">"Our mission is to win the trust of 50,000+ Petrol Pumps"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Journey Timeline -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Our Journey</span>
+      <h2>From Idea to <span>5000+ Customers</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2019</div>
+          <h5>The Idea</h5>
+          <p>Team BeanByte identifies the huge gap — petrol pump owners managing ₹10L+/month operations on paper. Research and field visits begin across Rajasthan.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2020</div>
+          <h5>Development Begins</h5>
+          <p>Full-time development of PetroByte begins. The core shift management, accounting, and reporting modules are built and tested with beta users.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2021</div>
+          <h5>First 100 Customers</h5>
+          <p>PetroByte officially launches. First 100 petrol pump dealers onboard across Rajasthan and Haryana. Mobile app published on Google Play Store.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2022</div>
+          <h5>TallyPrime Integration & Trademark</h5>
+          <p>TallyPrime data export feature launched. PetroByte® trademark registered. Expansion to Maharashtra, Uttar Pradesh, and Himachal Pradesh.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023</div>
+          <h5>iOS App & GST Reports</h5>
+          <p>Apple App Store app launched. Full GST (GSTR-1 & GSTR-3B) reporting module added. Customer base crosses 2,000 outlets.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-left"><div class="timeline-dot"></div><div class="timeline-dot" style="border-color:var(--orange)"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2025 — Present</div>
+          <h5>5000+ Customers & Growing</h5>
+          <p>PetroByte now serves 5000+ petrol pumps across 15+ states. Covering BPCL, HPCL, IOCL, and Nayara Energy dealers. Mission: 50,000+ pumps by 2030.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Our Values</span>
+      <h2>What We <span>Stand For</span></h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-icon" style="background:var(--blue-xlight)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+        <h5>Customer First</h5>
+        <p>Every feature we build starts with a real dealer's problem. We visit pumps, listen to feedback, and build accordingly.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-icon" style="background:var(--orange-light)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h5>Trust & Transparency</h5>
+        <p>No hidden charges. No lock-in. Your data is always yours. We succeed only when our customers succeed.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-icon" style="background:var(--success-light)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h5>Continuous Improvement</h5>
+        <p>We ship new features and improvements every month. Our roadmap is driven directly by customer feedback and market needs.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon" style="background:#F3E8FF"><svg viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h5>Made for India</h5>
+        <p>Built specifically for Indian petrol pump operations — DSR formats, oil company requirements, GST compliance, and INR pricing.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-icon" style="background:var(--blue-xlight)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h5>Always Available</h5>
+        <p>24/7 cloud uptime on Google Cloud. Our support team is available 6 days a week on phone, WhatsApp, and email.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-icon" style="background:var(--orange-light)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h5>Affordable Always</h5>
+        <p>Technology should not be a luxury. Our pricing starts at ₹300/month — accessible to every petrol pump dealer in India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Info -->
+<section class="section section-navy">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
+      <div class="reveal">
+        <span style="display:inline-block;background:rgba(232,120,32,0.15);color:var(--orange);padding:var(--sp-1) var(--sp-3);border-radius:var(--radius-pill);font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;margin-bottom:var(--sp-4)">ABOUT THE COMPANY</span>
+        <h2 style="color:white;margin-bottom:var(--sp-5)">BeanByte Softwares <span style="color:var(--orange)">Pvt. Ltd.</span></h2>
+        <p style="color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:var(--sp-4)">BeanByte Softwares Private Limited is a technology company based in Jaipur, Rajasthan, India. Founded with the mission of bringing enterprise-grade software to small and medium businesses at affordable prices.</p>
+        <p style="color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:var(--sp-6)">PetroByte is our flagship product — a cloud-based petrol pump management software now trusted by 5000+ dealers across India. We are MSME registered and a proud Made-in-India technology company.</p>
+        <div style="display:flex;flex-direction:column;gap:var(--sp-3)">
+          <div style="display:flex;align-items:center;gap:var(--sp-3);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Vatika Infotech City, Jaipur — 302026, Rajasthan, India
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--sp-3);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
+            +91 890 550 1200 | Mon–Sat, 9AM–8PM
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--sp-3);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hi@petrobyte.in
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:var(--sp-8)">
+          <h4 style="color:white;margin-bottom:var(--sp-5)">Our Products</h4>
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
+            <div style="display:flex;align-items:flex-start;gap:var(--sp-4);padding:var(--sp-4);background:rgba(255,255,255,0.05);border-radius:var(--radius-md)">
+              <div style="width:40px;height:40px;background:var(--blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M3 14h7v7H3z"/><path d="M17.5 14a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+              </div>
+              <div>
+                <h6 style="color:white;margin-bottom:4px">PetroByte®</h6>
+                <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.5)">Petrol Pump Management Software — Our flagship product serving 5000+ dealers across India.</p>
+              </div>
+            </div>
+          </div>
+          <p style="margin-top:var(--sp-5);font-size:var(--text-xs);color:rgba(255,255,255,0.4);text-align:center">BeanByte Softwares Pvt. Ltd. is an MSME registered company under the Government of India.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container"><div class="reveal">
+    <h2 style="color:white">Become Part of the PetroByte Family</h2>
+    <p>Join 5000+ petrol pump dealers who trust PetroByte to manage their business.</p>
+    <div class="cta-btns">
+      <a href="https://petrobyte.app/reg/welcome" class="btn btn-primary btn-lg" target="_blank">Start Free Trial</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+    </div>
+  </div></div>
+</section>
+
+<footer style="background:var(--navy);padding:var(--sp-8) 0;text-align:center;color:rgba(255,255,255,0.4);font-size:var(--text-sm);border-top:1px solid rgba(255,255,255,0.08)">
+  <div class="container">
+    <p>PetroByte® is a registered trademark of BeanByte Softwares Private Limited. Copyright © 2022–2026 All Rights Reserved.</p>
+    <div style="display:flex;justify-content:center;gap:var(--sp-5);margin-top:var(--sp-3);flex-wrap:wrap">
+      <a href="index.html" style="color:rgba(255,255,255,0.5)">Home</a>
+      <a href="features.html" style="color:rgba(255,255,255,0.5)">Features</a>
+      <a href="pricing.html" style="color:rgba(255,255,255,0.5)">Pricing</a>
+      <a href="about.html" style="color:var(--orange)">About</a>
+      <a href="contact.html" style="color:rgba(255,255,255,0.5)">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="scroll-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></div>
+<div class="toast"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
